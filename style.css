@@ -21,7 +21,7 @@ main {
 #image {
     width: 100%;
     aspect-ratio: 3/2;
-    background: round url("../img/img.jpg") border-box 0% 0%/33.333%;
+    background: round url("img/img.jpg") border-box 0% 0%/33.333%;
     position: relative;
 }
 
@@ -185,7 +185,7 @@ button:disabled {
     #image {
         width: 100%;
         aspect-ratio: 1/1;
-        background: round url("../img/img.jpg") border-box 0% 0%/50%;
+        background: round url("img/img.jpg") border-box 0% 0%/50%;
     }
 
     #resetBtn {
@@ -210,7 +210,7 @@ button:disabled {
     #image {
         width: 100%;
         aspect-ratio: 1/1;
-        background: no-repeat url("../img/img.jpg") border-box 0% 0%/contain;
+        background: no-repeat url("img/img.jpg") border-box 0% 0%/contain;
     }
 
     #buttons article {
