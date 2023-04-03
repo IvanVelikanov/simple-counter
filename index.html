@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper Version 7</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Smokum&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <section id="header">
+            <article id="image">
+                <article id="warningOne">Please select the max score!</article>
+                <article id="warningTwo" class="hideMe">Are you sure?<br>
+                    <button id="yes">Yes
+                    </button><button id="no">No</button>
+                </article>
+                <article id="warningWinner" class="hideMe">Player<br><span id="winner">0</span><br>wins!</article>
+            </article>
+
+            <p>Ping Pong Score Keeper</p>
+        </section>
+
+        <section id="content">
+            <article id="counter">
+                <span id="scoreOne">0</span> to <span id="scoreTwo">0</span>
+            </article>
+            <p>Use the buttons below to keep score</p>
+            <article>
+                <label for="maxscore">Playing to</label>
+                <select name="maxscore" id="maxscore">
+                    <option value="default">---</option>
+                </select>
+            </article>
+        </section>
+
+        <section id="buttons">
+            <article><button id="playerOne" disabled>+1 Player One
+                </button><button id="playerTwo" disabled>+1 Player Two
+                </button></article>
+            <button id="resetBtn" disabled>
+                Reset</button>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

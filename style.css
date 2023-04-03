@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    color: rgb(70, 20, 20);
+    transition: 2s ease-in-out background-color;
+}
+
+main {
+    font-family: 'Raleway', sans-serif;
+    width: 30%;
+    margin: 1em auto;
+    padding: 10px;
+    min-width: 280px;
+    background-color: white;
+    box-shadow: 0px 0px 1.2em 0.25em rgba(20, 10, 0, 0.22);
+}
+
+#header {
+    border-bottom: 1px solid rgb(90, 40, 40);
+}
+
+#image {
+    width: 100%;
+    aspect-ratio: 3/2;
+    background: round url("../img/img.jpg") border-box 0% 0%/33.333%;
+    position: relative;
+}
+
+#warningOne,
+#warningTwo,
+#warningWinner {
+    width: 100%;
+    aspect-ratio: 1/1;
+    font-size: 3em;
+    text-align: center;
+    padding-top: 25%;
+    background: border-box rgba(255, 250, 245, 0.8);
+    position: absolute;
+    box-sizing: border-box;
+    transition: 0.3s ease-out;
+}
+
+#warningTwo {
+    font-size: 2.5em;
+}
+
+#warningWinner {
+    font-size: 2.5em;
+    padding-top: 10%;
+}
+
+#winner {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+
+.hideMe {
+    opacity: 0;
+}
+
+#counter {
+    font-size: 3em;
+}
+
+#counter span {
+    font-weight: 500;
+    font-size: 1.5em;
+    animation: fadeIn 0.4s;
+    transition: font-size 0.4s ease-in, color 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#counter span.winner {
+    font-size: 1.7em;
+}
+
+#counter span.loser {
+    font-size: 1.3em;
+    color: rgb(180, 160, 140);
+}
+
+label {
+    font-weight: 700;
+}
+
+#buttons {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#buttons article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 60%;
+}
+
+
+button {
+    background-color: rgb(255, 250, 245);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.7em 1em;
+    flex-basis: 47%;
+    box-sizing: border-box;
+    border: 0.1em solid rgb(90, 40, 40);
+    color: rgb(90, 40, 40);
+    transition: 0.3s ease-out;
+    min-width: 135px;
+}
+
+button:hover {
+    background-color: rgb(225, 215, 205);
+    cursor: pointer;
+}
+
+#resetBtn {
+    flex-basis: 30%;
+}
+
+#resetBtn,
+#yes {
+    background-color: rgb(90, 40, 40);
+    color: rgb(255, 250, 245);
+    transition: 0.3s ease-out;
+}
+
+#resetBtn:hover,
+#yes:hover {
+    background-color: rgb(120, 80, 80);
+    cursor: pointer;
+}
+
+#yes,
+#no {
+    font-size: 0.4em;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+button:disabled {
+    background-color: rgb(240, 230, 220);
+    color: rgb(180, 160, 140);
+    border: 0.1em solid rgb(180, 160, 140);
+    cursor: not-allowed;
+}
+
+#resetBtn:disabled {
+    background-color: rgb(160, 140, 120);
+    color: rgb(220, 210, 200);
+    border: 0.1em solid rgb(180, 160, 140);
+    cursor: not-allowed;
+}
+
+#maxscore {
+    color: rgb(90, 40, 40);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#maxScore:active {
+    background-color: rgb(255, 250, 245);
+    cursor: pointer;
+}
+
+#maxScore:disabled {
+    cursor: not-allowed;
+}
+
+@media (min-width: 921px) and (max-width:1355px),
+(max-height: 850px) {
+    #image {
+        width: 100%;
+        aspect-ratio: 1/1;
+        background: round url("../img/img.jpg") border-box 0% 0%/50%;
+    }
+
+    #resetBtn {
+        flex-basis: 100%;
+    }
+
+    #buttons article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: 100%;
+    }
+
+    button {
+        min-width: 60px;
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 920px),
+(max-height: 600px) {
+    #image {
+        width: 100%;
+        aspect-ratio: 1/1;
+        background: no-repeat url("../img/img.jpg") border-box 0% 0%/contain;
+    }
+
+    #buttons article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 100%;
+    }
+
+    #resetBtn {
+        flex-basis: 100%;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-height: 850px) {
+    main {
+        width: 25%;
+        max-width: 400px;
+    }
+}
+
+@media (max-height: 725px) {
+    body {
+        font-size: 0.92em;
+    }
+
+    main {
+        width: 20%;
+        max-width: 300px;
+    }
+}
+
+@media (max-height: 600px) {
+    body {
+        font-size: 0.85em;
+    }
+
+    main {
+        width: 15%;
+        max-width: 200px;
+    }
+}
